@@ -28,7 +28,7 @@ defmodule Account.Runner do
   end
 
   defp schedule_run(pid) do
-    Process.send_after(pid, :run, 500)
+    send(pid, :run)
     Process.send_after(pid, :shutdown, 1500)
   end
 
