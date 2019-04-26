@@ -1,0 +1,8 @@
+language: elixir
+
+elixir: '1.8'
+otp_release: '21.0'
+
+script:
+  - mix compile
+  - mix run --no-halt
