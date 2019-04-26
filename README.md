@@ -11,6 +11,16 @@ mix compile
 mix run --no-halt
 ```
 
+&darr;
+
+```text
+opening the account: {:account_opened, [state: %{account_number: "A-1234", balance: 100}]}
+depositing funds: {:funds_deposited,
+ [state: %{account_number: "A-1234", balance: 150}, amount_deposited: 50]}
+withdrawing funds: {:funds_withdrawn,
+ [state: %{account_number: "A-1234", balance: 75}, amount_withdrawn: 75]}
+```
+
 ## Code Structure
 
 - [lib/demo.ex](lib/demo.ex) starts `Account.Runner` as a supervised process
