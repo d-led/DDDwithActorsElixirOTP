@@ -11,6 +11,24 @@ mix compile
 mix run --no-halt
 ```
 
+the code behind the demo:
+
+```elixir
+{:ok, account} = Account.start_link()
+
+account
+|> Account.open(%{account_number: "A-1234", initial_balance: 100})
+|> IO.inspect(label: "opening the account")
+
+account
+|> Account.deposit_funds(%{amount: 50})
+|> IO.inspect(label: "depositing funds")
+
+account
+|> Account.withdraw_funds(%{amount: 75})
+|> IO.inspect(label: "withdrawing funds")
+```
+
 &darr;
 
 ```text
